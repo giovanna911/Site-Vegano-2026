@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>História | Sálvia Branca</title>  
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="fundo">
+
+    <header id="main-header">
+        <a href="index.html" class="logo-link">
+            <img src="img/logo 4.png" alt="Logo Sálvia Branca" class="logo-img">
+            <span class="logo-text">SÁLVIA <span class="logo-light">BRANCA</span></span>
+        </a>
+        <nav>
+            <ul>
+                <li class="dropdown">
+                    <a href="index.html" class="dropbtn">Menu</a>
+                    <ul class="dropdown-content">
+                        <li><a href="sobremim.html">Sobre mim</a></li>
+                    </ul>
+                </li>
+
+                <li class="dropdown">
+                    <a href="sobre.html" class="dropbtn">História</a>
+                    <ul class="dropdown-content">
+                        <li><a href="sobre.html#galeria">Galeria de Fotos</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="sazonal.html" class="dropbtn">Sazonal</a>
+                    <ul class="dropdown-content">
+                        <li><a href="sazonal.html#comida">Hortifruti da estação</a></li>
+                        <li><a href="sazonal.html#receitas">Receitas da estação</a></li>
+                    </ul>
+                </li>
+                <li><a href="diario.html">Diário da Terra</a></li>
+                <li class="dropdown">
+                    <a href="compras.html" class="dropbtn">Compras</a>
+                    <ul class="dropdown-content">
+                        <li><a href="compras.html#origem">Produtos alimenticios</a></li>
+                        <li><a href="compras.html#estetica">Cosméticos</a></li>
+                    </ul>
+                </li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="slider-container" id="hero-image">
+    <div class="slider">
+        <div class="slide active">
+            <img src="img/opcoes-veganas.jpg" alt="Prato Vegano 1">
+        </div>
+        <div class="slide">
+            <img src=" img/cardapio-vegano-cardapio-vegetariano-diferencas.jpg" alt="Prato Vegano 2">
+        </div>
+        <div class="slide">
+            <img src="img/comidas.jpg" alt="Prato Vegano 3">
+        </div>
+    </div>
+
+    <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+    <button class="next" onclick="changeSlide(1)">&#10095;</button>
+
+            <div class="slider-dots">
+                <span class="dot active" onclick="currentSlideTo(0)"></span>
+                <span class="dot" onclick="currentSlideTo(1)"></span>
+                <span class="dot" onclick="currentSlideTo(2)"></span>
+            </div>
+        </div>
+
+            <h1 class="reveal">Nutra seu corpo, <br> Respeite nosso planeta </h1>
+            <button class="btn-primary reveal" onclick="window.location.href='sazonal.html'">DESCUBRA O MENU GASTRONÔMICO</button>
+        </section>
+
+        
+    </main>
+
+    <footer>
+    <div class="footer-container">
+        <div class="footer-section">
+            <span class="logo-text">SÁLVIA BRANCA</span>
+            <p>Estética, consciência e o ritmo da terra.</p>
+        </div>
+        
+        <div class="footer-section">
+            <h4>Navegação</h4>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="sazonal.html">Sazonal</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-section">
+            <h4>Redes Sociais</h4>
+            <div class="social-links">
+                <a href="#">Instagram</a>
+                <a href="#">Pinterest</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="footer-bottom">
+        <p>&copy; 2026 Sálvia Branca. Todos os direitos reservados.</p>
+    </div>
+</footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

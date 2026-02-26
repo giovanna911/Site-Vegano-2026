@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sálvia Branca | Minimalista</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div id="btn-reabrir" onclick="toggleAlerta()" title="Ver aviso importante">
+        ▼
+    </div>
+
+    <header id="main-header">
+        <a href="index.html" class="logo-link">
+            <img src="img/logo 4.png" alt="Logo Terra Vegan" class="logo-img">
+            <span class="logo-text">SÁLVIA BRANCA</span>
+        </a>
+        <nav>
+           <ul>
+                <li class="dropdown">
+                    <a href="index.html" class="dropbtn">Menu</a>
+                    <ul class="dropdown-content">
+                        <li><a href="sobremim.html">Sobre mim</a></li>
+                    </ul>
+                </li>
+
+                <li class="dropdown">
+                    <a href="sobre.html" class="dropbtn">História</a>
+                    <ul class="dropdown-content">
+                        <li><a href="sobre.html#galeria">Galeria de Fotos</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="sazonal.html" class="dropbtn">Sazonal</a>
+                    <ul class="dropdown-content">
+                        <li><a href="sazonal.html#comida">Hortifruti da estação</a></li>
+                        <li><a href="sazonal.html#receitas">Receitas da estação</a></li>
+                    </ul>
+                </li>
+                <li><a href="diario.html">Diário da Terra</a></li>
+                <li class="dropdown">
+                    <a href="compras.html" class="dropbtn">Compras</a>
+                    <ul class="dropdown-content">
+                        <li><a href="compras.html#origem">Produtos alimenticios</a></li>
+                        <li><a href="compras.html#estetica">Cosméticos</a></li>
+                    </ul>
+                </li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        
+        <section class="sobre-section" style="padding: 100px 20px; max-width: 1200px; margin: 0 auto;">
+            <div class="container-sobre">
+                
+                <div id="aviso-venda" class="conteudo reveal">
+                    <span id="btn-fechar-alerta" onclick="toggleAlerta()">&times;</span>
+                    
+                    <span style="font-weight: bold; font-size: 16px;">⚠️ AVISO IMPORTANTE:</span>
+                    <p style="margin-top: 10px; font-size: 15px; padding-right: 20px;">
+                        Atuamos exclusivamente na divulgação de produtos. Ressaltamos que <strong>não possuímos vínculo</strong> com os sites de venda externos. Verifique sempre as políticas da loja de destino.
+                    </p>
+                    <br>
+                    <p style="font-size: 15px; margin-top: 10px; padding-right: 20px;">
+                        Os preços apresentados são uma média de mercado e podem variar. Recomendamos consultar o site do vendedor para informações atualizadas.
+                    </p>
+                </div> 
+
+                <h1 class="frase reveal" style="font-family: 'Playfair Display', serif; font-size: 2.5rem; line-height: 1.4; color: #333; margin-bottom: 40px; text-align: center; margin-top: 40px;">
+                    "Não tira nada de um ser humano ser gentil com um animal."
+                </h1>
+            </div>
+            
+            <div class="conteudo-flex reveal" style="display: flex; align-items: center; gap: 50px; margin-bottom: 100px;">
+                <div class="texto" style="flex: 1.5;">
+                    <p style="font-size: 1.1rem; line-height: 1.8; color: #555; text-align: justify;">
+                        Esta página é um espaço dedicado exclusivamente à divulgação de produtos alimentícios e de estética veganos. Nossa curadoria seleciona itens 100% livres de origem animal, facilitando o seu acesso a opções que unem ética e qualidade em um só lugar. 
+                    Aqui, você encontrará uma variedade de produtos que respeitam os princípios do veganismo, desde alimentos frescos e processados até cosméticos e itens de cuidado pessoal. 
+                    Nosso objetivo é promover um estilo de vida mais consciente, oferecendo alternativas que não apenas beneficiam os animais, mas também o meio ambiente e a sua saúde.    
+                    </p>
+                </div>
+            </div>
+
+            <h2 id="origem" class="reveal" style="text-align: center; margin-bottom: 40px; font-family: 'Playfair Display', serif;">Produtos Alimentícios</h2>
+            
+            <div class="grid-sazonal reveal">
+                <div class="card-sazonal">
+                    <div class="image-container" style="position: relative;">
+                        <span class="compras">Alimento</span>
+                        <img src="img/compras/manteiga card.jpg" alt="Manteiga vegana" class="card-image">
+                    </div>
+                   
+                    <div class="card-content">
+                        <h3>Manteiga de Castanha de Caju 200g</h3>
+                        <p style="font-size: 0.9rem; color: #666; margin-bottom: 15px;">Mix de óleos, castanha-de-caju, vitaminas B6 e B12. Sabor idêntico ao natural.</p>
+                        <br><br><br><br><br>
+                        <p style="font-weight: bold; color: #2c5530; margin-bottom: 15px;">R$ 27,18</p>
+                        
+                        <a href="https://vidaveg.com.br/produtos/manteiga-de-castanha-de-caju-200g/" class="btn-comprar" target="_blank">Comprar Agora</a>
+                    </div>
+                </div>
+
+                <div class="card-sazonal">
+                    <div class="image-container" style="position: relative;">
+                        <span class="compras">Alimento</span>
+                        <img src="img/compras/queijos card.png" alt="Queijo vegano" class="card-image">
+                        </div>
+                        <div class="card-content">
+                        <h3>QueijoVeg Padrão de Castanha de Caju 200g</h3>
+                        <p style="font-size: 0.9rem; color: #666; margin-bottom: 15px;">Base de castanha fermentada (água, castanha-de-caju e fermento), óleo de coco palmiste, amido de batata, amido de milho modificado, sal, extrato de levedura, vitaminas (B6 e B12), conservante sorbato de potássio e aroma natural.</p>
+                        <p style="font-weight: bold; color: #2c5530; margin-bottom: 15px;">R$ 32,90</p>
+                        
+                        <a href="https://vidaveg.com.br/produtos/queijoveg-padrao-de-castanha-de-caju-200g/" class="btn-comprar" target="_blank">Comprar Agora</a>
+                    </div>
+                </div>
+
+                <div class="card-sazonal">
+                    <div class="image-container" style="position: relative;">
+                        <span class="compras">Bebida</span>
+                        <img src="img/compras/bebida.png" alt="Bebida vegana" class="card-image" >
+                        </div>
+                        <div class="card-content">
+                        <h3>Bebida de Coco 700g</h3>
+                        <p style="font-size: 0.9rem; color: #666; margin-bottom: 15px;">Base coco (água e leite de coco concentrado*), cálcio (fosfato tricálcico), sal, vitaminas B6 e B12, emulsificante lecitina de girassol, estabilizantes goma guar e goma gelana, aroma natural e edulcorante stévia.</p>
+                        <br><br><br>
+                        <p style="font-weight: bold; color: #2c5530; margin-bottom: 15px;">R$ 18,99</p>
+                        
+                        <a href="https://vidaveg.com.br/produtos/bebida-de-coco-700g/" class="btn-comprar" target="_blank">Comprar Agora</a>
+                    </div>
+                </div>
+
+                <div class="card-sazonal">
+                    <div class="image-container" style="position: relative;">
+                        <span class="compras">Bebida</span>
+                        <img src="img/compras/coffe.png" alt="Bebida vegana" class="card-image">
+                        </div>
+                        <div class="card-content">
+                        <h3>Vida Coffee Baunilha 240mL</h3>
+                        <p style="font-size: 0.9rem; color: #666; margin-bottom: 15px;">Base de aveia (água, aveia), creme de coco + TCM, café solúvel, taurina, guaraná em pó, emulsificante lecitina de girassol, estabilizante goma xantana, aromas naturais e edulcorante stévia</p>
+                        <br><br><br>
+                        <p style="font-weight: bold; color: #2c5530; margin-bottom: 15px;">R$ 14,90</p>
+                        
+                        <a href="https://vidaveg.com.br/produtos/vida-coffee-baunilha-240ml/" class="btn-comprar" target="_blank">Comprar Agora</a>
+                    </div>
+                </div>
+
+                <div class="card-sazonal">
+                    <div class="image-container" style="position: relative;">
+                        <span class="compras">Bebida</span>
+                        <img src="img/compras/shake.png" alt="Shake vegano" class="card-image">
+                        </div>
+                        <div class="card-content">
+                        <h3>Veg Pro Morango 250mL</h3>
+                        <p style="font-size: 0.9rem; color: #666; margin-bottom: 15px;">Base de aveia (água e aveia), proteínas de ervilha e girassol, morango em pó, estabilizante fosfato trissódico, aroma natural, edulcorante stevia e corante vermelho allura.</p>
+                        <br><br><br>
+                        <p style="font-weight: bold; color: #2c5530; margin-bottom: 15px;">R$ 10,90</p>
+                        
+                        <a href="https://vidaveg.com.br/produtos/veg-pro-morango-250ml/" class="btn-comprar" target="_blank">Comprar Agora</a>
+                    </div>
+                </div>
+
+                <div class="card-sazonal">
+                    <div class="image-container" style="position: relative;">
+                        <span class="compras">Alimento</span>
+                        <img src="img/compras/doce.png" alt="Mousse Sabor Doce Deleite 200g" class="card-image">
+                        </div>
+                        <div class="card-content">
+                        <h3>Mousse Sabor Doce Deleite 200g</h3>
+                        <p style="font-size: 0.9rem; color: #666; margin-bottom: 15px;">Leite de coco (água e creme de coco), açúcar, amido de milho modificado, fibra de raiz de chicória, proteína de ervilha, fibra cítrica, extrato de levedura, sal, aroma natural de doce de leite e conservante sorbato de potássio.</p>
+                        <p style="font-weight: bold; color: #2c5530; margin-bottom: 15px;">R$ 12,00</p>
+                        
+                        <a href="https://vidaveg.com.br/produtos/mousse-sabor-doce-deleite-200g/" class="btn-comprar" target="_blank">Comprar Agora</a>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+<br><br><br><br>
+            <h2 id="estetica" class="reveal" style="text-align: center; margin-bottom: 40px; font-family: 'Playfair Display', serif;">Cosméticos</h2>
+            <div class="grid-sazonal reveal">
+                <div class="card-sazonal">
+                    <div class="image-container" style="position: relative;">
+                        <span class="compras">Skin care</span>
+                        <img src="img/compras/protetores.webp" alt="Kit Bio Sun - Protetor Solar Físico e Natural FPS 30 - 150g + 50g" class="card-image">
+                    </div>
+                   
+                    <div class="card-content">
+                        <h3>Kit Bio Sun - Protetor Solar Físico e Natural FPS 30 - 150g</h3>
+                        <p style="font-size: 0.9rem; color: #666; margin-bottom: 15px;">Na fórmula, você encontra:
+                            Óxido de Zinco e Dióxido de Titânio não-nano (Ecocert) → Proteção solar física eficaz e segura.
+                            Bioativos de Células-Tronco da Suculenta Africana (Lithops pseudotruncatella) → Estimulam a produção de Vitamina D na pele e têm ação antioxidante similar à Vitamina C.
+                            Vitamina E (Tocoferol) → Poderoso antioxidante que combate o envelhecimento precoce.
+                        </p>
+                        <br><br><br><br><br><br><br><br><br>
+                        <p style="font-weight: bold; color: #2c5530; margin-bottom: 15px;">R$ 241,61</p>
+                        <a href="https://auravie.com.br/products/kit-bio-sun-protetor-solar-fisico-e-natural-fps-30-150g-50g" class="btn-comprar" target="_blank">Comprar Agora</a>
+                    </div>
+                </div>
+
+                <div class="card-sazonal">
+                    <div class="image-container" style="position: relative;">
+                        <span class="compras">Skin Care</span>
+                        <img src="img/compras/kit.png" alt="Kit Essenciais do Verão" class="card-image">
+                        </div>
+                        <div class="card-content">
+                        <h3>Kit Essenciais do Verão</h3>
+                        <p style="font-size: 0.9rem; color: #666; margin-bottom: 15px;">O Kit Essenciais do Verão foi criado para acompanhar sua pele nos dias mais quentes com proteção inteligente, cuidado profundo e conforto real. Uma seleção estratégica de três produtos que atuam de forma complementar para proteger, equilibrar e revitalizar a pele ao longo de toda a estação.</p>
+                        <br>
+                        <p><strong>Nele irá conter:</strong></p>
+                        <br>
+                            <p><li>O protetor BioSun</li></p>
+                            <p><li>O desodorante spray Auravie</li></p>
+                            <p><li>O Lumen Elixir Botânico</li></p>
+                            <br>
+                            <p>O Kit Essenciais do Verão é a escolha ideal para quem deseja atravessar a estação com proteção, equilíbrio e uma pele visivelmente bem cuidada, sem abrir mão de fórmulas naturais, veganas e de alta performance.</p>
+                            <br>
+                        <p style="font-weight: bold; color: #2c5530; margin-bottom: 15px;">R$ 336,20</p>
+                        
+                        <a href="https://auravie.com.br/products/kit-essencial-de-autocuidado-copia" class="btn-comprar" target="_blank">Comprar Agora</a>
+                    </div>
+                </div>
+
+                <div class="card-sazonal">
+                    <div class="image-container" style="position: relative;">
+                        <span class="compras">Corporal</span>
+                        <img src="img/compras/desodorante.webp" alt="Kit 3 refis desodorante spray" class="card-image" >
+                        </div>
+                        <div class="card-content">
+                        <h3>Kit 3 refis desodorante spray</h3>
+                        <p style="font-size: 0.9rem; color: #666; margin-bottom: 15px;">O Refil do Desodorante Spray Auravie mantém a mesma fórmula eficaz do produto original, oferecendo proteção natural contra odores sem bloquear a transpiração ou comprometer a microbiota da pele. Com prebióticos, enzimas vegetais e citrato de prata, ele neutraliza o mau odor de forma inteligente e segura.</p>
+                        <br><br><br><br><br><br>
+                        <br><br><br><br><br><br><br>
+                        <p style="font-weight: bold; color: #2c5530; margin-bottom: 15px;">R$ 114,75</p>
+                        
+                        <a href="https://auravie.com.br/products/kit-3-refis-desodorante-spray" class="btn-comprar" target="_blank">Comprar Agora</a>
+                    </div>
+                </div>
+
+                <div class="card-sazonal">
+                    <div class="image-container" style="position: relative;">
+                        <span class="compras">Perfumaria</span>
+                        <img src="img/compras/body.webp" alt="Body Splash Deo Colônia Limoncello – Vizzela" class="card-image">
+                        </div>
+                        <div class="card-content">
+                        <h3>Body Splash Deo Colônia Limoncello – Vizzela</h3>
+                        <p style="font-size: 0.9rem; color: #666; margin-bottom: 15px;">O Body Splash Limoncello traz notas cítricas de limão e bergamota que se misturam com flores delicadas como: jasmim e lírio do vale, finalizando com um toque suave de musk, sândalo e vanilla. Leve, vibrante e refrescante.</p>
+                        <br><br><br><br>
+                        <p style="font-weight: bold; color: #2c5530; margin-bottom: 15px;">R$ 39,90</p>
+                        
+                        <a href="https://www.vizzela.com.br/products/body-splash-deo-colonia-limoncello-vizzela" class="btn-comprar" target="_blank">Comprar Agora</a>
+                    </div>
+                </div>
+
+                <div class="card-sazonal">
+                    <div class="image-container" style="position: relative;">
+                        <span class="compras">Maquiagem</span>
+                        <img src="img/compras/lip.webp" alt="Shake vegano" class="card-image">
+                        </div>
+                        <div class="card-content">
+                        <h3>Lip Oil Limoncello – Vizzela</h3>
+                        <p style="font-size: 0.9rem; color: #666; margin-bottom: 15px;">Com textura leve e transparente, entrega efeito glossy sem adicionar cor, garantindo conforto e acabamento luminoso na medida certa. Sua fórmula é enriquecida com ativos hidratantes, possui efeito cooling refrescante e fragrância de limão siciliano, proporcionando uma sensação deliciosa de frescor a cada aplicação.</p>
+                        <br><br><br>
+                        <p style="font-weight: bold; color: #2c5530; margin-bottom: 15px;">R$ 69,90</p>
+                        
+                        <a href="https://www.vizzela.com.br/products/lip-oil-limoncello-vizzela" class="btn-comprar" target="_blank">Comprar Agora</a>
+                    </div>
+                </div>
+
+                <div class="card-sazonal">
+                    <div class="image-container" style="position: relative;">
+                        <span class="compras">Maquiagem</span>
+                        <img src="img/compras/rimel.webp" alt="Máscara Big No Panda Brown Vizzela - Marrom" class="card-image">
+                        </div>
+                        <div class="card-content">
+                        <h3>Máscara Big No Panda Brown Vizzela - Marrom</h3>
+                        <p style="font-size: 0.9rem; color: #666; margin-bottom: 15px;">Com pigmentação marrom, a máscara Big No Panda Brown Vizzela entrega um look sofisticado, natural e delicado, realçando a maquiagem de forma elegante. Conta com a tecnologia NO PANDA, que não mancha e sai dos cílios em forma de película com água morna. O aplicador BIG curvado proporciona volume, definição e curvatura, deixando o olhar ainda mais destacado.</p>
+                        <p style="font-weight: bold; color: #2c5530; margin-bottom: 15px;">R$ 49,90</p>
+                        
+                        <a href="https://www.vizzela.com.br/products/mascara-big-no-panda-brown" class="btn-comprar" target="_blank">Comprar Agora</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+    <div class="footer-container">
+        <div class="footer-section">
+            <span class="logo-text">SÁLVIA BRANCA</span>
+            <p>Estética, consciência e o ritmo da terra.</p>
+        </div>
+        
+        <div class="footer-section">
+            <h4>Navegação</h4>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="sazonal.html">Sazonal</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-section">
+            <h4>Redes Sociais</h4>
+            <div class="social-links">
+                <a href="#">Instagram</a>
+                <a href="#">Pinterest</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="footer-bottom">
+        <p>&copy; 2026 Sálvia Branca. Todos os direitos reservados.</p>
+    </div>
+</footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

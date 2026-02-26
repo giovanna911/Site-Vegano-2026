@@ -1,0 +1,881 @@
+/* --- RESET E CORES --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #F9F9F7; 
+    font-family: 'Inter', sans-serif;
+    color: #4A4A4A;
+    overflow-x: hidden;
+}
+
+h2{
+    color: rgb(41, 91, 91);
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 2rem;
+    text-shadow: 2px 2px 4px rgba(201, 188, 188, 0.603);
+}
+
+.fundo {
+    background-color: rgba(255, 255, 255, 0.95);
+}
+
+/* --- HEADER E LOGO --- */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 8%;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    transition: all 0.4s ease;
+}
+
+header.scrolled {
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 15px 8%;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.logo-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    gap: 12px;
+}
+
+.logo-img {
+    height: 45px;
+    width: auto;
+}
+
+.logo-text {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3rem;
+    letter-spacing: 2px;
+    font-weight: bold;
+    color: #333;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li { margin-left: 25px; }
+
+nav ul li a {
+    text-decoration: none;
+    color: #777;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover { color: #000; }
+
+/* --- HERO E CARROSSEL --- */
+.hero {
+    padding: 140px 8% 80px;
+    text-align: center;
+    background-color: #FFFFFF;
+}
+
+.slider-container {
+    max-width: 900px;
+    margin: 0 auto 40px;
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.slider {
+    position: relative;
+    height: 450px;
+}
+
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.slide.active { opacity: 1; }
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.slider-dots { padding: 15px 0; }
+
+.dot {
+    height: 8px;
+    width: 8px;
+    margin: 0 5px;
+    background-color: #D1D1D1;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+
+
+.dot.active { background-color: #8E8E8E; }
+
+h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    color: #2D2D2D;
+    margin-bottom: 25px;
+}
+
+.btn-primary {
+    background-color: #E2E2D8;
+    border: none;
+    padding: 15px 35px;
+    color: #555;
+    cursor: pointer;
+    letter-spacing: 1px;
+}
+
+
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.9s ease-out;
+}
+
+.sobre{
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    color: #2D2D2D;
+    text-align: center;
+    margin-top: 200px;
+    margin-bottom: 100px;
+}
+
+.container {
+  display: flex;          /* Ativa o modo flexível */
+  align-items: center;    /* Alinha o texto e a imagem verticalmente no centro */
+  justify-content: space-between; /* Cria o espaço máximo entre o texto e a imagem */
+  gap: 20px;              /* Adiciona um espaço para eles não grudarem */
+}
+
+.texto {
+  flex: 1;                /* Faz o texto ocupar o espaço disponível */
+}
+
+.imagem {
+  max-width: 300px;       /* Define um tamanho máximo para a imagem */
+  height: auto;
+}
+
+.frase{
+    text-align: center;
+    margin-top: 40px;
+}
+
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.features {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    padding: 100px 8%;
+    background-color: #F9F9F7;
+}
+
+.icon {
+    font-size: 1.5rem;
+    width: 70px;
+    height: 70px;
+    border: 1px solid #E0E0E0;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 15px;
+    background: #fff;
+}
+
+footer {
+    background-color: #ffffff;
+    padding: 60px 8% 20px;
+    border-top: 1px solid #E2E2D8;
+    color: #4A4A4A;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.footer-section h4 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1rem;
+    margin-bottom: 20px;
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.footer-section p {
+    font-size: 0.9rem;
+    color: #777;
+    line-height: 1.6;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a, .social-links a {
+    text-decoration: none;
+    color: #777;
+    font-size: 0.85rem;
+    transition: color 0.3s;
+}
+
+.footer-section ul li a:hover, .social-links a:hover {
+    color: #000;
+}
+
+.social-links {
+    display: flex;
+    gap: 20px;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 30px;
+    border-top: 1px solid #F0F0F0;
+    font-size: 0.75rem;
+    color: #BBB;
+    letter-spacing: 1px;
+}
+
+
+/* Estilo das Setas */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.5);
+    color: #333;
+    border: none;
+    padding: 15px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    border-radius: 50%;
+    transition: background 0.3s, color 0.3s;
+    z-index: 10;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.prev { left: 20px; }
+.next { right: 20px; }
+
+.prev:hover, .next:hover {
+    background-color: #E2E2D8;
+    color: #000;
+}
+
+/* Garante que os pontos sejam clicáveis */
+.dot {
+    cursor: pointer;
+}
+
+/* --- SEÇÃO DE CONTATO --- */
+.contact-section {
+    padding: 150px 8% 100px;
+    background-color: #FFFFFF;
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Divide em duas colunas no desktop */
+    gap: 80px;
+    max-width: 1100px;
+    width: 100%;
+}
+
+.contact-info h1 {
+    font-size: 2.8rem;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.contact-info p {
+    color: #8E8E8E;
+    margin-bottom: 30px;
+}
+
+.contact-details p {
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+    color: #4A4A4A;
+}
+
+/* --- FORMULÁRIO --- */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-group label {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #333;
+    font-weight: 700;
+}
+
+.form-group input, 
+.form-group textarea {
+    padding: 15px;
+    border: 1px solid #E2E2D8;
+    background-color: #F9F9F7;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
+    color: #4A4A4A;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus, 
+.form-group textarea:focus {
+    outline: none;
+    border-color: #8E8E8E;
+}
+
+/* Ajuste para dispositivos móveis */
+@media (max-width: 768px) {
+    .contact-container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    .contact-section {
+        padding-top: 120px;
+    }
+}
+
+/* --- ACRÉSCIMOS PARA O ALINHAMENTO --- */
+
+.container-sobre {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.conteudo-flex {
+    display: flex;
+    align-items: center;    /* Centraliza verticalmente texto e imagem */
+    justify-content: space-between;
+    gap: 50px;              /* Espaçamento entre eles */
+    text-align: left;       /* Garante que o texto fique alinhado à esquerda */
+}
+
+
+.imagem-wrapper {
+    flex: 0 0 40%; 
+    max-width: 400px;
+}
+
+.imagem-historia {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.imagem-donald {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    max-width: 300px;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+nav ul li {
+    position: relative;
+    display: inline-block;
+}
+
+/* 3. CAIXA DO DROPDOWN (O MENU SUSPENSO) */
+.dropdown-content {
+    display: none; 
+    position: absolute;
+    background-color: #ffffff;
+    min-width: 200px; 
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.1);
+    z-index: 1000;
+    list-style: none;
+    padding: 10px 0;
+    margin: 0;
+    border-radius: 4px;
+    top: 100%; 
+    left: 0;
+    text-align: left;
+}
+
+/* 4. LINKS DENTRO DO DROPDOWN */
+.dropdown-content li a {
+    color: #333;
+    padding: 12px 20px;
+    text-decoration: none;
+    display: block;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    transition: background 0.2s ease;
+}
+
+
+.dropdown-content li a:hover {
+    background-color: #f8f9fa; 
+    color: #000;
+}
+
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+.dropbtn {
+    cursor: pointer;
+}
+
+/* Estrutura Principal: Texto de um lado, Galeria do outro */
+.container-veganismo {
+    display: flex;
+    gap: 40px; /* Espaço entre o texto e as fotos */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    align-items: flex-start;
+}
+
+/* Estilo da Coluna de Texto */
+.coluna-texto {
+    flex: 1; /* Ocupa metade do espaço */
+    text-align: justify;
+    line-height: 1.8;
+}
+
+/* Estilo da Galeria de Fotos */
+.coluna-galeria {
+    flex: 1; /* Ocupa a outra metade */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Cria 2 colunas iguais */
+    grid-template-rows: repeat(3, 1fr);    /* Cria 3 linhas iguais */
+    gap: 15px; /* Espaçamento entre as fotos */
+}
+
+/* Estilo individual das imagens */
+.coluna-galeria img {
+    width: 100%;
+    height: 250px; /* Altura fixa para manter o alinhamento */
+    object-fit: cover; /* Faz a foto preencher o espaço sem distorcer */
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efeito ao passar o mouse */
+.coluna-galeria img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    cursor: pointer;
+}
+
+/* Configuração da Galeria e Efeito de Subir */
+.efeito-levantar {
+    /* Faz a transição ser suave (0.3 segundos) */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.efeito-levantar:hover {
+    /* Move a imagem 15 pixels para cima */
+    transform: translateY(-15px);
+    /* Adiciona uma sombra para parecer que a foto descolou da página */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2) !important;
+}
+
+/* --- ESTILIZAÇÃO DOS CARDS SAZONAIS --- */
+
+.grid-sazonal {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+.card-sazonal {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+    border: 1px solid #E2E2D8; /* Segue o padrão de cores do seu site */
+}
+
+.card-sazonal:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.image-container {
+    position: relative;
+    width: 100%;
+    height: 220px;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.selo-estacao {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: #e17909; /* Cinza minimalista para combinar com o site */
+    color: white;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 0.7rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.compras{
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: #e1cf09; /* Cinza minimalista para combinar com o site */
+    color: white;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 0.7rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.card-content {
+    padding: 20px;
+}
+
+.card-content h3 {
+    margin: 0 0 10px 0;
+    color: #2D2D2D;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4rem;
+    text-shadow: none; /* Removendo sombra do h2 global para os cards */
+}
+
+.card-content p {
+    margin: 0;
+    color: #777777;
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+.meu-link {
+    text-decoration: none; /* Tira o sublinhado */
+    color: #3498db;        /* Define uma cor azul moderna */
+    font-weight: bold;     /* Deixa o texto em negrito */
+    transition: 0.3s;      /* Faz a mudança de cor ser suave, não brusca */
+  }
+
+  /* 2. Muda a cor quando o mouse passa por cima (hover) */
+  .meu-link:hover {
+    color: #e74c3c;        /* Muda para vermelho (ou a cor que preferir) */
+    text-decoration: underline; /* Opcional: volta o risco só no hover */
+  }
+
+ .receita-logo {
+    display: flex;
+    align-items: center;      /* Alinha imagem e texto verticalmente no centro um do outro */
+    justify-content: center;  /* ESTE É O COMANDO: Alinha o conjunto todo no centro da tela */
+    text-decoration: none;
+    gap: 14px;
+    width: 100%;             /* Garante que ele ocupe a largura total para poder centralizar */
+    margin: 20px 0;          /* Opcional: dá um espaço em cima e embaixo da logo */
+}
+
+/* --- ADICIONAIS PARA A PÁGINA DE RECEITA --- */
+
+.receita-corpo {
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+
+/* Estilização dos itens com foto */
+.lista-ingredientes li {
+    display: flex;       /* Coloca foto e texto lado a lado */
+    align-items: center; /* Centraliza verticalmente */
+    gap: 15px;           /* Espaço entre a foto e o texto */
+    padding: 10px 0;
+    border-bottom: 1px solid #E2E2D8;
+}
+
+.ingrediente-img {
+    width: 40px;         /* Tamanho da imagem (ajuste se quiser maior) */
+    height: 40px;
+    object-fit: cover;   /* Garante que a foto não distorça */
+    border-radius: 50%;  /* Deixa as fotos redondinhas (estilo ícone) */
+    background-color: #f0f0ed; /* Fundo suave caso a imagem demore a carregar */
+}
+
+/* Ajuste para o texto não colar na imagem */
+.lista-ingredientes li span {
+    font-size: 1rem;
+    color: #4A4A4A;
+}
+
+.instrucoes-container {
+    margin-top: 80px;
+    padding-top: 40px;
+    border-top: 1px solid #E2E2D8;
+}
+
+.lista-passos {
+    margin-top: 20px;
+    padding-left: 20px;
+}
+
+.lista-passos li {
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+/* Ajuste para telas menores */
+@media (max-width: 768px) {
+    .receita-corpo {
+        flex-direction: column-reverse;
+    }
+    h1 {
+        font-size: 2.2rem;
+    }
+}
+
+.card-sazonal {
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    max-width: 350px;
+    margin: 20px auto;
+    font-family: 'Inter', sans-serif;
+}
+.card-image { width: 100%; height: auto; display: block; }
+.card-content { padding: 20px; }
+.card-content h3 { font-family: 'Playfair Display', serif; margin-bottom: 10px; }
+        
+/* O BOTÃO ARRUMADO AQUI */
+.btn-comprar {
+    display: inline-block;
+    background-color: #2c5530; /* Verde elegante */
+    color: white;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: background 0.3s ease;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+    border: none;
+    cursor: pointer;
+}
+.btn-comprar:hover {
+    background-color: #1e3a21;
+}
+
+/* Estilo do Alerta de Aviso */
+#aviso-venda {
+    background-color: #fffbeb;
+    border-left: 6px solid #f59e0b;
+    padding: 20px;
+    color: #92400e;
+    font-family: sans-serif;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    position: relative;
+    margin-bottom: 20px;
+}
+
+#btn-fechar-alerta {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    cursor: pointer;
+    font-size: 22px;
+    font-weight: bold;
+    line-height: 1;
+}
+
+/* Botão Flutuante para Reabrir (Seta) */
+#btn-reabrir {
+    display: none; /* Começa escondido */
+    position: fixed;
+    top: 100px;
+    right: 20px;
+    background: #f59e0b;
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    z-index: 9999;
+    text-align: center;
+    line-height: 40px;
+    font-size: 18px;
+    transition: transform 0.2s, background 0.3s;
+}
+
+#btn-reabrir:hover {
+    transform: scale(1.1);
+    background: #d97706;
+}
+
+/* Estilo do Botão de Compra no Card */
+.btn-comprar {
+    display: block;
+    background-color: #2c5530;
+    color: white;
+    padding: 12px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.btn-comprar:hover {
+    background-color: #1e3a21;
+}
+
+/* Estilos para o Diário da Terra */
+.diario-container {
+    max-width: 1100px;
+    margin: 100px auto;
+    padding: 0 20px;
+    font-family: 'Inter', sans-serif;
+}
+
+.diario-intro {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.diario-intro h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+.lunar-widget {
+    margin-top: 20px;
+    font-style: italic;
+    color: #7f8c8d;
+    font-size: 0.9rem;
+}
+
+/* Grid de Posts */
+.diario-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.diario-card {
+    background: #fdfdfd;
+    padding: 40px;
+    border: 1px solid #eee;
+    transition: transform 0.3s ease;
+}
+
+.diario-card:hover {
+    transform: translateY(-5px);
+}
+
+.card-tag {
+    text-transform: uppercase;
+    font-size: 0.7rem;
+    letter-spacing: 2px;
+    color: #8da399; /* Verde Sálvia */
+    margin-bottom: 20px;
+}
+
+.diario-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.diario-card p {
+    line-height: 1.6;
+    color: #555;
+    font-weight: 300;
+}
+
+/* Card em Destaque */
+.diario-card.highlight {
+    background-color: #f4f7f6;
+    border: none;
+}
+
+.btn-read {
+    display: inline-block;
+    margin-top: 20px;
+    text-decoration: none;
+    color: #2c3e50;
+    border-bottom: 1px solid #2c3e50;
+    font-size: 0.8rem;
+    padding-bottom: 2px;
+}

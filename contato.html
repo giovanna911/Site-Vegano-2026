@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato | Sálvia Branca</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header id="main-header">
+        <a href="index.html" class="logo-link">
+            <img src="img/logo 4.png" alt="Logo Sálvia Branca" class="logo-img">
+            <span class="logo-text">SÁLVIA <span class="logo-light">BRANCA</span></span>
+        </a>
+        <nav>
+            <ul>
+                <li class="dropdown">
+                    <a href="index.html" class="dropbtn">Menu</a>
+                    <ul class="dropdown-content">
+                        <li><a href="sobremim.html">Sobre mim</a></li>
+                    </ul>
+                </li>
+
+                <li class="dropdown">
+                    <a href="sobre.html" class="dropbtn">História</a>
+                    <ul class="dropdown-content">
+                        <li><a href="sobre.html#galeria">Galeria de Fotos</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="sazonal.html" class="dropbtn">Sazonal</a>
+                    <ul class="dropdown-content">
+                        <li><a href="sazonal.html#comida">Hortifruti da estação</a></li>
+                        <li><a href="sazonal.html#receitas">Receitas da estação</a></li>
+                    </ul>
+                </li>
+                <li><a href="diario.html">Diário da Terra</a></li>
+                <li class="dropdown">
+                    <a href="compras.html" class="dropbtn">Compras</a>
+                    <ul class="dropdown-content">
+                        <li><a href="compras.html#origem">Produtos alimenticios</a></li>
+                        <li><a href="compras.html#estetica">Cosméticos</a></li>
+                    </ul>
+                </li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="contact-section">
+            <div class="contact-container reveal">
+                
+                <div class="contact-info">
+                    <h1>Fale Conosco</h1>
+                    <p class="subtitle">Dúvidas, sugestões ou apenas um "olá"? Adoraríamos ouvir você.</p>
+                    
+                    <div class="contact-details">
+                        <div class="detail-item">
+                            <strong>Endereço</strong>
+                            <p>Alameda das Cores, 123 — Jardim Botânico, SP</p>
+                        </div>
+                        <div class="detail-item">
+                            <strong>Atendimento</strong>
+                            <p>Segunda a Sexta: 09h às 18h</p>
+                        </div>
+                        <div class="detail-item">
+                            <strong>Conecte-se</strong>
+                            <p>contato@salviabranca.com.br</p>
+                            <p>@salviabranca</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form-wrapper">
+                    <form action="#" class="contact-form">
+                        <div class="form-group">
+                            <label for="name">Nome Completo</label>
+                            <input type="text" id="name" name="name" placeholder="Ex: Maria Silva" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">E-mail</label>
+                            <input type="email" id="email" name="email" placeholder="seuemail@exemplo.com" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="subject">Assunto</label>
+                            <select id="subject" name="subject">
+                                <option value="duvida">Dúvidas</option>
+                                <option value="parceria">Parcerias</option>
+                                <option value="outro">Outros</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Mensagem</label>
+                            <textarea id="message" name="message" rows="5" placeholder="Como podemos ajudar?" required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn-primary">ENVIAR MENSAGEM</button>
+                    </form>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2026 Sálvia Branca. Estética e Consciência.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
