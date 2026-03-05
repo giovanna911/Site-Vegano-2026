@@ -133,3 +133,26 @@ function toggleAlerta() {
         btnReabrir.style.display = 'block';
     }
 }
+
+/* ==========================================================================
+   LÓGICA DO MENU MOBILE (COM VERIFICAÇÃO DE SEGURANÇA)
+   ========================================================================== */
+const menuBtn = document.getElementById('mobile-menu');
+const navMenu = document.getElementById('nav-menu');
+
+// Só executa se os elementos existirem na página atual
+if (menuBtn && navMenu) {
+    menuBtn.addEventListener('click', () => {
+        navMenu.classList.toggle('active');
+        menuBtn.classList.toggle('is-active');
+    });
+
+    // Fecha o menu ao clicar em um link (melhor experiência)
+    document.querySelectorAll('#nav-menu a').forEach(link => {
+        link.addEventListener('click', () => {
+            navMenu.classList.remove('active');
+            menuBtn.classList.remove('is-active');
+        });
+    });
+}
+

@@ -883,3 +883,113 @@ nav ul li {
 .sobre-section{
     line-height: 1.8;
 }
+
+/* --- ESTILO DO BOTÃO HAMBÚRGUER --- */
+.menu-toggle {
+    display: none; /* Escondido no Desktop */
+    flex-direction: column;
+    cursor: pointer;
+    background: none;
+    border: none;
+    gap: 5px;
+    z-index: 1001;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    transition: 0.3s;
+    border-radius: 2px;
+}
+
+/* --- REGRA PARA CELULAR (ATÉ 768px) --- */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: flex; /* Mostra no celular */
+    }
+
+    /* Animação para virar X quando estiver ativo */
+    .menu-toggle.is-active .bar:nth-child(2) { opacity: 0; }
+    .menu-toggle.is-active .bar:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+    .menu-toggle.is-active .bar:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+
+    nav {
+        position: fixed;
+        top: 0;
+        right: -100%; /* Começa escondido à direita */
+        width: 70%;
+        height: 100vh;
+        background-color: #ffffff;
+        box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+        transition: 0.4s ease;
+        padding-top: 100px;
+        z-index: 1000;
+    }
+
+    nav.active {
+        right: 0; /* Desliza para dentro da tela */
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        list-style: none;
+    }
+
+    nav ul li {
+        margin: 20px 0;
+        margin-left: 0;
+    }
+
+    nav ul li a {
+        font-size: 1.2rem; /* Aumenta o link para facilitar o toque */
+    }
+}
+
+/* --- RESPONSIVIDADE PARA PÁGINAS SEM HAMBÚRGUER --- */
+@media (max-width: 768px) {
+    /* Header empilhado */
+    #main-header:not(:has(#mobile-menu)) { 
+        flex-direction: column;
+        height: auto;
+        padding: 15px 5%;
+    }
+
+    /* Estilo para a classe nav-simples (sempre visível) */
+    .nav-simples {
+        display: block !important;
+        width: 100%;
+        margin-top: 15px;
+    }
+
+    .nav-simples ul {
+        flex-direction: row !important; /* Mantém lado a lado */
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .nav-simples ul li {
+        margin: 0;
+    }
+
+    .nav-simples ul li a {
+        font-size: 0.8rem;
+    }
+
+    /* Ajuste geral de conteúdo para todas as páginas */
+    .conteudo-flex, 
+    .container-veganismo, 
+    .contact-container,
+    .container {
+        flex-direction: column !important;
+        text-align: center !important;
+        gap: 30px;
+    }
+
+    .imagem-wrapper, .coluna-texto, .coluna-galeria, .texto, .imagem {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+}
